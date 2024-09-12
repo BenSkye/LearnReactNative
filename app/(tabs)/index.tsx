@@ -6,7 +6,7 @@ import LittleLemonHeader from '@/components/layout/Header';
 import Content from '@/components/layout/Content';
 import ListContent from '@/components/layout/ContentList';
 import ListContent2 from '@/components/layout/ContentList';
-
+import LoginPage from '../pages/Login';
 
 const containerStyle: ViewStyle = {
   flex: 1,
@@ -32,7 +32,7 @@ const HomeScreen: React.FC = () => {
         <LittleLemonHeader />
       </View>
       <View style={contentContainerStyle} >
-        <ListContent2 />
+        <LoginPage />
       </View>
       <View style={footerContainerStyle}>
         <LittleLemonFooter />

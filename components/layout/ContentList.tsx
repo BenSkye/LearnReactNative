@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { menuItemsToDisplay } from '@/app/service/data';
 import { menuItemsToDisplay2 } from '@/app/service/dataList';
+import TextBox from './TextBox';
 
 type ItemProps = { id: string, name: string, price: string };
 type ITemProps2 = { title: string, data: { name: string, price: number }[] };
@@ -45,6 +46,7 @@ const Item2 = ({ title, data }: ITemProps2) => (
 const ListContent2: React.FC = () => {
     return (
         <SafeAreaView style={styles.container}>
+            <TextBox />
             <FlatList
                 data={menuItemsToDisplay2}
                 renderItem={({ item }) => <Item2 title={item.title} data={item.data} />}
@@ -79,5 +81,5 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         fontSize: 30,
         textAlign: 'center',
-    }
+    },
 });
